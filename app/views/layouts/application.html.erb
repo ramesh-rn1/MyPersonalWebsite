@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Portfolio</title>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  	<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+  	<script src="//unslider.com/unslider.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+ 
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div class="header">
+    <div class="container">
+  	 	<div class="menu col-xs-8">
+        <ul>
+          <li><%= link_to "Welcome", root_url %></li>
+          <li><%= link_to "Portfolio", '/portfolio' %></li>
+          <li><%= link_to "Blog", 'https://www.quora.com/profile/Ramesh-Nagaraj-1' %></li>
+          <li><%= link_to "About", '/about' %></li>
+          <li><%= link_to "Contact", '/contact' %></li>
+        </ul>
+       </div>
+       <div class="name col-xs-4">
+          <h1>Ramesh</h1>
+       </div>
+    </div>
+  
+  </div>
+
+<%= yield %>
+
+  <div class="footer">
+    <div class="container">
+      <ul class="social_media">
+        <li><a class="github" href="https://github.com/ramesh-rn1">github</a></li> 
+        <li><a class="linkedin" href="https://in.linkedin.com/in/rameshrn1">linkedin</a></li>
+        <li><a class="twitter" href="https://twitter.com/ramesh_rn1">twitter</a></li> 
+      </ul>
+      <p>&copy; 2015 Ramesh</p> 
+    </div>
+  </div>
+
+  <script src="//unslider.com/unslider.min.js"></script>
+  <script>
+	$(function() {
+    $('.banner').unslider();
+});
+  </script>
+
+</body>
+</html>
